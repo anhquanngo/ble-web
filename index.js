@@ -44,7 +44,7 @@ const SCAN_OPTIONS = {
 let arr = [];
 function startDeviceScanner() {
   navigator.bluetooth
-    .requestDevice(SCAN_OPTIONS)
+    .requestLEScan(SCAN_OPTIONS)
     .then((scanner) => {
       console.log(scanner.active);
       navigator.bluetooth.addEventListener('advertisementreceived', (event) => {
